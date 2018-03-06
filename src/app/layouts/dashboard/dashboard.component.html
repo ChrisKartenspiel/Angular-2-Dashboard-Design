@@ -1,0 +1,212 @@
+<div>
+  <md-toolbar class="top-nav" >
+    <div class="logo">
+      <md-icon>album</md-icon>
+    </div>
+    <div class="nav-wrapper">
+      <ul fxLayout="row" fxLayoutAlignGap="20px" >
+        <li fxLayoutAlign="center center">
+          <md-icon>web</md-icon>
+          <span>Dashboard</span>
+        </li>
+        <li fxLayoutAlign="center center" class="active">
+          <md-icon>playlist_play</md-icon>
+          <span>Pattern List</span>
+        </li>
+      </ul>
+    </div>
+    <div class="search">
+      <div class="search-container">
+        <input type="text" placeholder="Search..." >
+      </div>
+    </div>
+    <div class="spacer" fxFlex="1 1 auto"></div>
+    <div class="profile" fxLayout="row" fxLayoutAlign="center"  >
+      <div class="pic">
+        <span>C</span>
+      </div>
+      <div class="profile-name">
+        <h4>Chris Barajas</h4>
+      </div>
+    </div>
+    <div class="notification">
+      <div class="note-wrapper" (click)="backstorm = !backstorm">
+        <div class="counter" *ngIf="backstorm">
+          <span>5</span>
+        </div>
+        <md-icon *ngIf="backstorm">notifications</md-icon>
+        <md-icon *ngIf="!backstorm">notifications_none</md-icon>
+      </div>
+    </div>
+    <div class="config-menu">
+        <md-icon>settings</md-icon>
+    </div>
+  </md-toolbar>
+  <div class="container" >
+    <div fxFlexFill fxLayout="row" fxLayoutAlign="center">
+      <div fxFlex="85%" fxFlex.gt-md="60%">
+        <div class="jumbotron">
+          <md-card>
+            <div>
+              <div fxFlexFill class="labels" fxLayout="column" fxLayoutAlign="center">
+                <h3 fxFlex="100%">Welcome to the DASHBOARD</h3>
+                <h4 fxFlex="100%">2 of 5</h4>
+                <div class="process-bar"
+                     fxLayout="row"
+                     fxFlex="100%"
+                     fxLayoutGap="1%"
+                     fxLayoutAlign="center center"
+                >
+                  <div fxFlex="19%" class="step completed"></div>
+                  <div fxFlex="19%" class="step completed"></div>
+                  <div fxFlex="19%" class="step current"></div>
+                  <div fxFlex="19%" class="step"></div>
+                  <div fxFlex="19%" class="step"></div>
+                </div>
+              </div>
+            </div>
+          </md-card>
+        </div>
+        <div class="main-wrapper" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="6%">
+
+          <div class="right-content" fxFlex="30%">
+            <md-card class="card-container paddingless">
+              <div class="profile some-padding "
+                   fxLayout="row"
+                   fxLayoutAlign="space-around center"
+                   fxLayoutGap="20px"
+              >
+                <div class="pic">
+                  <span>C</span>
+                </div>
+                <div class="profile-name">
+                  <h4>Chris Barajas</h4>
+                </div>
+                <div class="profile-detail">
+                  <md-icon>input</md-icon>
+                </div>
+              </div>
+              <div class="slither"></div>
+              <div class="profile-data some-padding">
+                <div class="birthday slither"
+                     fxLayout="row"
+                     fxLayoutAlign="space-around center"
+                >
+                  <md-icon>event</md-icon>
+                  <h5>07.08.1989</h5>
+                </div>
+                <div class="phone slither"
+                     fxLayout="row"
+                     fxLayoutAlign="space-around center"
+                >
+                  <md-icon>settings_phone</md-icon>
+                  <h5>477 285 7830</h5>
+                  <div fxFlex="1 1 auto"></div>
+                  <a href="#">Send SMS</a>
+                </div>
+                <div class="mail"
+                     fxLayout="row"
+                     fxLayoutAlign="space-around center"
+                >
+                  <md-icon>mail_outline</md-icon>
+                  <h5>abc@gmail.com</h5>
+                  <div fxFlex="1 1 auto"></div>
+                  <a href="#">Send Email</a>
+                </div>
+              </div>
+            </md-card>
+            <md-card class="card-container ">
+              <div class="card-title">CTA AREA </div>
+              <div class="slither some-padding"></div>
+              <div class="cta-container" fxLayout="row" fxLayoutAlign="center center">
+                <div fxFlex="50%">
+                  <h5><span>185</span><br><small>Points</small></h5>
+                </div>
+                <button fxFlex="50%">REDEEM THEM</button>
+              </div>
+            </md-card>
+            <md-card class="card-container">
+              <div class="card-title">Stats Timeline</div>
+              <div class="slither"></div>
+              <div class="stats-list">
+                <div class="stat-item  slither" fxLayout="row" fxLayoutAlign="space-around center">
+                  <div class="index">1</div>
+                  <div class="date">11.04.2016</div>
+                  <div fxFlex="1 1 auto"></div>
+                  <div class="totals">4/5</div>
+                </div>
+                <div class="stat-item  slither" fxLayout="row" fxLayoutAlign="space-around center">
+                  <div class="index">2</div>
+                  <div class="date">21.05.2016</div>
+                  <div fxFlex="1 1 auto"></div>
+                  <div class="totals">12/19</div>
+                </div>
+                <div class="stat-item" fxLayout="row" fxLayoutAlign="space-around center">
+                  <div class="index">3</div>
+                  <div class="date">08.06.2016</div>
+                  <div fxFlex="1 1 auto"></div>
+                  <div class="totals">8/10</div>
+                </div>
+              </div>
+            </md-card>
+          </div>
+
+          <div class="left-content"fxFlex="70%" >
+            <div class="actions" fxLayoutGap="5px">
+              <button md-button class="btn-outline blue"> Planned <md-icon>arrow_downward</md-icon></button>
+              <div fxFlex="1 1 auto"></div>
+              <button md-button class="btn-outline"><md-icon>add</md-icon> Add Stat</button>
+              <button md-button class="btn-outline"><md-icon>add</md-icon> Add Breakpoint</button>
+              <button md-button class="btn-outline"><md-icon>add</md-icon> Add Record</button>
+            </div>
+            <div class="list-item" fxLayout="row" fxLayoutGap="5%" *ngFor="let stat of statsList">
+              <md-card class="resume gradiant" fxFlex="10%" fxLayoutAlign="center center">
+                <div>
+                <md-icon *ngIf="stat.type === 'reminder'">note</md-icon>
+                <md-icon *ngIf="stat.type === 'appointment'">alarm</md-icon>
+                <md-icon *ngIf="stat.type === 'info'">hourglass_empty</md-icon>
+                </div>
+              </md-card>
+              <md-card class="details-item" fxFlex="90%" >
+                <div fxLayout="row"fxLayoutAlign="strech strech" >
+                  <div class="left-ribbon" fxFlex="30%">
+                    <div fxLayout="column">
+                      <div fxFlex="50%">
+                        <h5><span>Date</span></h5>
+                        <span>{{stat.date}}</span>
+                      </div>
+                      <div fxFlex="50%">
+                        <h5><span>Owner</span></h5>
+                        <span>{{stat.owner}}</span>
+                      </div>
+                      <div fxFlex="50%">
+                        <h5><span>Time</span></h5>
+                        <span>{{stat.hour}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-wrapper" fxFlex="70%">
+                    <h5><span>Details</span></h5>
+                    <span>{{stat.description}}</span>
+                    <br>
+                    <h5><span>Type</span></h5>
+                    <span>{{stat.type}}</span>
+
+                  </div>
+                </div>
+              </md-card>
+            </div>
+
+            <md-card class="actions" fxLayoutAlign="end center" fxLayoutGap="10px">
+              <button md-button class="btn-outline blue">Start Over</button>
+              <button md-button class="btn-outline blue">Pause</button>
+              <button md-button class="gradiant">Add New Stat</button>
+
+            </md-card>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

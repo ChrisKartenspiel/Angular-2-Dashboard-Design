@@ -1,0 +1,41 @@
+<div fxFlexFill fxLayout="row" fxLayoutAlign="center">
+  <div fxFlex="85%" fxFlex.gt-md="60%">
+
+    <md-card>
+    <h1>Easy Stats</h1>
+    <md-select placeholder="Select User" [(ngModel)]="userSelected" >
+      <md-option *ngFor="let client of users" [value]="client.id">
+        {{client.username}}
+      </md-option>
+    </md-select>
+    <md-input-container>
+      <input mdInput name="range" type="text" [(ngModel)]="range" placeholder="range" />
+    </md-input-container>
+    <button md-button (click)="getStats()">Get Stats</button>
+  </md-card>
+  <md-card style="margin: 20px 0px;">
+    <app-area-chart [config]="areaChartConfig"></app-area-chart>
+  </md-card>
+
+<!--
+    <md-card *ngIf="ngxData.length > 0 " style="min-height: 400px; margin: 20px 0px">
+    <ngx-charts-area-chart
+      [view]="ngxView"
+      [scheme]="ngxColorScheme"
+      [results]="ngxData"
+      [gradient]="ngxGradient"
+      [xAxis]="ngxShowXAxis"
+      [yAxis]="ngxShowYAxis"
+      [legend]="ngxShowLegend"
+      [showXAxisLabel]="ngxShowXAxisLabel"
+      [showYAxisLabel]="ngxShowYAxisLabel"
+      [xAxisLabel]="ngxXAxisLabel"
+      [yAxisLabel]="ngxYAxisLabel"
+      [autoScale]="ngxAutoScale"
+      (select)="onSelect($event)"
+    ></ngx-charts-area-chart>
+  </md-card>
+-->
+
+  </div>
+</div>
